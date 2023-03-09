@@ -27,7 +27,7 @@ def subStart():
             if int(label.grid_info()["row"]) > 7:
                 label.grid_forget()
 
-        filterID = int(fID.get())
+        filterID = fID.get()
         idOption = str()
         unitOption = str()
         subList.clear()
@@ -225,7 +225,7 @@ def subStart():
     label = tk.Label(window2, text="ID Filter", width = 15, height = 1, bg = "gray")
     label.config(font= ("Montserrat, 10"))
     label.grid(column = 5, row = 1)
-    fID = tk.StringVar(window2)
+    fID = tk.IntVar(window2)
     filterSubjectID = tk.Entry(window2, textvariable=fID)
     filterSubjectID.grid(column = 5, row = 2)
     selectedValue = tk.StringVar(window2)
