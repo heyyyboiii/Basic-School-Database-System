@@ -26,7 +26,7 @@ def filter():
         if int(label.grid_info()["row"]) > 7:
             label.grid_forget()
 
-    filterID = int(fID.get())
+    filterID = fID.get()
     idOption = str()
     studList.clear()
     studList.append(["ID", "Name", "Email", "Course"])
@@ -222,7 +222,7 @@ label.grid(column = 5, row = 1)
 fID = tk.StringVar()
 filterStudentID = tk.Entry(window, textvariable=fID)
 filterStudentID.grid(column = 5, row = 2)
-selectedValue = tk.StringVar()
+selectedValue = tk.IntVar()
 dropdownMenu = tk.OptionMenu(window, selectedValue, '>', '>=', '<', '<=', '!=', '=')
 dropdownMenu.grid(column = 4, row = 2)
 selectedValue.set('>')
